@@ -4,6 +4,9 @@
     <li>
         <h2>{{ title }}</h2>
         {{!-- code to display images goes here --}}
+        {{#if image}}  <p> <image href ="{{image}}"/> </p> {{/if}}
+        
+        
         <p>{{ description }}</p>
         <p>Location: {{ location }}</p>
         <p>Likes: {{ likes }}
@@ -23,6 +26,19 @@
   <h2>Add an event</h2>
     <form action="/event" method="post" enctype="multipart/form-data">
        title: <input name="title" type="text" /> <br />
+       description: <input name="description" type="text" /> <br />
+       location: <input name="location" type="text" /> <br />
+               {{!-- modify hidden input below for file upload --}}
+               jpeg image: <input type="file" name="image" id="image" value="" /> <br />
+       <!-- <input type="hidden" name="image" id="image" value="" /> -->
+        <input type="submit" name="submit" value="submit" />
+    </form>
+  </div>
+
+  <div>
+  <h2>Add an event approval </h2>
+    <form action="/approval" method="post" enctype="multipart/form-data">
+       title: <input name="title2" type="text" /> <br />
        description: <input name="description" type="text" /> <br />
        location: <input name="location" type="text" /> <br />
                {{!-- modify hidden input below for file upload --}}

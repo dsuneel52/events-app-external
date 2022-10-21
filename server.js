@@ -3,7 +3,7 @@
 console.log(`process.env.SERVER = ${process.env.SERVER}`);
 // get the environment variable, but default to localhost:8082 if its not set
 const SERVER = process.env.SERVER ? process.env.SERVER : "http://localhost:8082";
-const LIVE_BUCKET = process.env.LIVE_BUCKET ? process.env.LIVE_BUCKET : "";
+const LIVE_BUCKET = process.env.LIVE_BUCKET ? process.env.LIVE_BUCKET : "roigcp-hca-u109-public";
 
 // express is a nodejs web server
 // https://www.npmjs.com/package/express
